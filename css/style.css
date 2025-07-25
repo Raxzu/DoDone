@@ -233,19 +233,18 @@ button img{
     flex-direction: column;
 }
 
-#box1 {
-  position: relative;
-
-  /* Position box 300px to the left of center, but shift to center on small screens */
-  margin-left: clamp(0px, calc(50% - 300px), calc(50% - 300px));
-  margin-right: auto;
-
-  /* Responsive width that never overflows */
-  width: min(1000px, 100%);
-
+#box2 {
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
   box-sizing: border-box;
-  padding: 20px;
-  justify-content: center;
+  padding: 0px;
+}
+
+#box1 {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px;
   text-align: left;
 }
 .mission_section{
