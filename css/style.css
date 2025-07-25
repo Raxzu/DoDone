@@ -31,7 +31,7 @@ body {
     display: block;
     height: 84px;
     width: 100%;
-    background-image: url(/images/cornerseethoughlinesleft34.png);
+    background-image: url("images/cornerseethoughlinesleft34.png");
     background-color: rgba(222,222,220,1);
     background-blend-mode: overlay;
     background-position: center;
@@ -125,7 +125,7 @@ a, a:visited, a:hover, a:active {
   z-index: -2;
   display: flex;
   position: relative;
-    background-image: linear-gradient(to right, rgba(0,0,0,0.95) 30%, rgba(255,0,0,0)), url(/images/Hero.JPG);
+    background-image: linear-gradient(to right, rgba(0,0,0,0.95) 30%, rgba(255,0,0,0)), url("images/hero.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -309,7 +309,7 @@ button img{
 }
 .mission_section{
   z-index: -3;
-    background-image: url(/images/cornerseethoughlinesleft34.png);
+    background-image: url("images/cornerseethoughlinesleft34.png");
     background-color: rgba(222,222,220,1);
     background-blend-mode: overlay;
     background-position: center;
@@ -384,7 +384,7 @@ h2{
 }
 .product_section{
   position: relative;
-    background-image: url(/images/seethoughlines50.png);
+    background-image: url("images/seethoughlines50.png");
     background-color: rgba(14,40,67,1);
     background-blend-mode: overlay;
     background-position: center;
@@ -513,7 +513,7 @@ h2{
     z-index: -10;
     display: block;
     width: 100%;
-    background-image: url(/images/Slantedseethoughlines8.png);
+    background-image: url("images/slantedseethoughlines8.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -551,7 +551,7 @@ h2{
     z-index: 10;
 }
 .contact_section{
-    background-image: url(/images/Stiltsblur100.jpg);
+    background-image: url("images/stiltsblur100.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -653,7 +653,7 @@ h2{
   font-size: 14px;
 }
 .contact-info {
-    background-image: url(/images/cornerseethoughlinesrightbottom50.png);
+    background-image: url("images/cornerseethoughlinesrightbottom50.png");
     background-color: rgba(14,40,67,1);
     background-blend-mode: overlay;
     background-position: right;
@@ -669,7 +669,7 @@ h2{
       font-size: 1.1rem;
     }
 .footer_section{
-    background-image: url(/images/Slantedseethoughlines.png);
+    background-image: url("images/slantedseethoughlines.png");
     background-color: rgba(222,222,220,1);
     background-blend-mode: overlay;
     background-position: right;
