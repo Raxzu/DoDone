@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dodone Ehitus</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    
     <script
     type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -55,20 +57,20 @@
         <div id="mission_columns">
         <div class="mission_left">
             <div id="idstats">
-        <div class="stats"><h2>20+</h2><span>Püsivaid Kliendisuhted</span></div>
-        <div class="stats"><h2>136+</h2><span>Rahulolevaid Kliente</span></div>
+        <div class="stats" data-aos="zoom-in"><h2>20+</h2><span>Püsivaid Kliendisuhted</span></div>
+        <div class="stats" data-aos="zoom-in"><h2>136+</h2><span>Rahulolevaid Kliente</span></div>
             </div>
-        <img src="images/DoDonePlanning.png" alt="">
+        <img src="images/DoDonePlanning.png" data-aos="fade-up" data-aos-offset="200" alt="">
         </div>
         <div class="mission_right">
-        <h2 class="h2left">15 aastat</h2>
-        <h2 class="h2left" id="kogemust">kogemust</h2>
-        <div id="about1">
+        <h2 class="h2left" data-aos="zoom-in">15 aastat</h2>
+        <h2 class="h2left" data-aos="zoom-in" id="kogemust">kogemust</h2>
+        <div id="about1" data-aos="fade-up">
         <p>DoDone OÜ on spetsialiseerunud ümberehitustöödele, sealhulgas korterite remondile, vanade põrandate ja uste restaureerimisele ning taastamisele.</p> 
         <p>Lisaks ehitame erinevaid väiksemaid hooneid nagu saunad, abiruumid ja varjualused.</p>
         <p>Meie tugevuseks on eritööd, mis nõuavad mittestandardseid lahendusi ja vana ning uue sobitamist. Pakume ka jooniste koostamise teenust.</p>
         </div>
-        <div id="signed">
+        <div id="signed" data-aos="fade-left">
         <img src="images/allkirisiim.png" alt="">
         <p>Siim-Sander Veske Asutaja</p>
         </div>
@@ -77,7 +79,7 @@
     </div>
     <hr class="goldenline">
     <div id="teenused" class="product_section">
-        <div class="workflow">
+        <div class="workflow" data-aos="slide-right" data-aos-duration="1500">
             <div class="timeline-wrapper">
                 <div class="arrow-right"></div>
                 <div class="timeline-line"></div>
@@ -177,7 +179,10 @@
     <div class="field">
       <textarea id="message" name="message" rows="5" placeholder="Sõnum..." required></textarea>
     </div>
-    <button id="submit" type="submit">Saada <img src="images/Send.png" alt=""></button>
+    <button id="submit" type="submit" class="fancy-button">
+  <span class="label">Saada<img src="images/Send.png" alt=""></span>
+  <span class="spinner" aria-hidden="true"></span>
+</button>
     <div id="form-status" style="margin-top:10px; font-weight:bold;"></div>
   </form>
 
@@ -224,7 +229,15 @@
 
     </div>
     
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="app.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true, // animations happen only once when scrolling down
+    duration: 1000, // animation duration in ms
+  });
+</script>
 </body>
 </html>

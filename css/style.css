@@ -25,13 +25,13 @@ body {
     z-index: 10;
 }
 .bg1{
-    z-index: -10;
-    position: fixed;
+    z-index: -1;
+    position: absolute;
     top: 0px;
     display: block;
     height: 84px;
     width: 100%;
-    background-image: url(images/cornerseethoughlinesleft34.png);
+    background-image: url(/images/cornerseethoughlinesleft34.png);
     background-color: rgba(222,222,220,1);
     background-blend-mode: overlay;
     background-position: center;
@@ -39,6 +39,8 @@ body {
     background-size: cover;
 }
 .header_section{
+  position: relative;
+  z-index: 10;
     justify-self: center;
     height: 84px;
     display: grid;
@@ -120,14 +122,33 @@ a, a:visited, a:hover, a:active {
 
 
 .hero_section{
-    background-image: linear-gradient(to right, rgba(0,0,0,0.95) 30%, rgba(255,0,0,0)), url(images/Hero.JPG);
+  z-index: -2;
+  display: flex;
+  position: relative;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.95) 30%, rgba(255,0,0,0)), url(/images/Hero.JPG);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--blue);
-    height: 670px;
-    width: auto;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0px;
+    margin: 0px auto;
+
+    animation: heroBackgroundMove 8s ease-in-out forwards;
+    overflow: hidden;
 }
+@keyframes heroBackgroundMove {
+  0% {
+    background-position: center center;
+    transform: scale(1.1);
+  }
+  100% {
+    background-position: right center;
+    transform: scale(1);
+  }
+}
+
 .hero_section p{
     color: var(--white);
 }
@@ -142,6 +163,16 @@ a, a:visited, a:hover, a:active {
 #slogan{
     margin-top: 170px;
     margin-left: 60px;
+  
+    opacity: 0;
+  transform: translateX(100px);
+  animation: slideInRight 1.2s ease-out 1.5s forwards;
+}
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 #slogan2{
     margin-top: 8px;
@@ -167,6 +198,7 @@ button{
 #button1{
     margin-top: 100px;
     margin-left: 400px;
+    width: 320px;
 }
 button img{
     padding: 5px;
@@ -175,23 +207,25 @@ button img{
 }
 .fancy-button {
   position: relative;
-  background-color: #A48149;
-  color: #000;
-  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
   padding: 14px 28px;
   border: none;
   border-radius: 12px;
+
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
   cursor: pointer;
   overflow: hidden;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: transform 0.15s ease, opacity 0.2s ease;
+  outline: none;
 }
 
-/* Shine overlay */
+/* Glare */
 .fancy-button::before {
   content: "";
   position: absolute;
@@ -201,36 +235,62 @@ button img{
   height: 100%;
   background: linear-gradient(
     120deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.4) 50%,
-    rgba(255, 255, 255, 0) 100%
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.55) 50%,
+    rgba(255,255,255,0) 100%
   );
   transform: skewX(-25deg);
+  pointer-events: none;
 }
-
-/* Hover animation */
 .fancy-button:hover::before {
-  animation: shine 0.8s ease forwards;
+  animation: shine 0.9s ease forwards;
 }
-
 @keyframes shine {
-  0% {
-    left: -75%;
-  }
-  100% {
-    left: 125%;
-  }
+  0%   { left: -75%; }
+  100% { left: 125%; }
 }
 
-/* Optional hover lift effect */
-.fancy-button:hover {
-  transform: translateY(-2px);
+/* Click press effect */
+.fancy-button:active {
+  transform: scale(0.98);
 }
-.hero_section div{
-    justify-self: start;
-    display: flex;
-    grid-template-columns: repeat(2 ,1fr);
-    flex-direction: column;
+
+/* Spinner inside button */
+.fancy-button .spinner {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.35);
+  border-top-color: rgba(255,255,255,0.95);
+  animation: spin 0.8s linear infinite;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.fancy-button.loading {
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.fancy-button.loading .spinner {
+  opacity: 1;
+}
+
+.fancy-button.loading .label {
+  opacity: 0.6;
+}
+
+.fancy-button.success {
+  background-color: #65a30d;
+  color: #fff;
+}
+
+.fancy-button.error {
+  background-color: #dc2626;
+  color: #fff;
 }
 
 #box2 {
@@ -248,7 +308,8 @@ button img{
   text-align: left;
 }
 .mission_section{
-    background-image: url(images/cornerseethoughlinesleft34.png);
+  z-index: -3;
+    background-image: url(/images/cornerseethoughlinesleft34.png);
     background-color: rgba(222,222,220,1);
     background-blend-mode: overlay;
     background-position: center;
@@ -322,7 +383,8 @@ h2{
     margin: 0px;
 }
 .product_section{
-    background-image: url(images/seethoughlines50.png);
+  position: relative;
+    background-image: url(/images/seethoughlines50.png);
     background-color: rgba(14,40,67,1);
     background-blend-mode: overlay;
     background-position: center;
@@ -451,7 +513,7 @@ h2{
     z-index: -10;
     display: block;
     width: 100%;
-    background-image: url(images/Slantedseethoughlines8.png);
+    background-image: url(/images/Slantedseethoughlines8.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -489,7 +551,7 @@ h2{
     z-index: 10;
 }
 .contact_section{
-    background-image: url(images/Stiltsblur100.jpg);
+    background-image: url(/images/Stiltsblur100.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -576,10 +638,11 @@ h2{
       margin-top: 10px;
     }
 
-#submit{
-    width: 100%;
-    color: var(--white);
+#submit {
+  width: 100%;
+  color: var(--white);
 }
+
 
 
 .field {
@@ -590,7 +653,7 @@ h2{
   font-size: 14px;
 }
 .contact-info {
-    background-image: url(images/cornerseethoughlinesrightbottom50.png);
+    background-image: url(/images/cornerseethoughlinesrightbottom50.png);
     background-color: rgba(14,40,67,1);
     background-blend-mode: overlay;
     background-position: right;
@@ -606,7 +669,7 @@ h2{
       font-size: 1.1rem;
     }
 .footer_section{
-    background-image: url(images/Slantedseethoughlines.png);
+    background-image: url(/images/Slantedseethoughlines.png);
     background-color: rgba(222,222,220,1);
     background-blend-mode: overlay;
     background-position: right;
