@@ -77,3 +77,32 @@ form.addEventListener("submit", function (e) {
       }, 3000);
     });
 });
+
+
+document.querySelectorAll(".slideshow").forEach(slideshow => {
+  const images = JSON.parse(slideshow.dataset.images);
+  let current = 0;
+
+  const imgElements = images.map(src => {
+    const img = document.createElement("img");
+    img.src = `images/${src}`;
+    slideshow.appendChild(img);
+    return img;
+  });
+
+  function showSlide(index) {
+    imgElements.forEach((img, i) => {
+      img.classList.remove("active");
+      if (i === index) img.classList.add("active");
+    });
+  }
+
+  showSlide(current);
+
+  setInterval(() => {
+    current = (current + 1) % images.length;
+    showSlide(current);
+  }, 4000);
+});
+
+
