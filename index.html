@@ -38,6 +38,8 @@
         </div>
         <div class="bg1"></div>
         <hr class="goldenline">
+                                <button onclick="location.href='#kontaktid'" class="fancy-button" id="button1">Võta Meiega ühendust<img
+                                src="images/arrow-right-circle.png" alt=""></button>
         <div class="hero_section">
             <div id="box2">
                 <div id="box1">
@@ -47,8 +49,7 @@
                     </div>
                     <div>
                         <p id="catchy">Tööd, mis on loodud just sinu vajadusi silmas pidades.</p>
-                        <button class="fancy-button" id="button1"><a href="#kontaktid">Võta Meiega ühendust </a><img
-                                src="images/arrow-right-circle.png" alt=""></button>
+
                     </div>
                     <div></div>
                 </div>
@@ -116,7 +117,8 @@
                 </div>
             </div>
             <h2 id="question">Kuidas saame aidata?</h2>
-            <div id="teenused" class="gallery-grid">
+            <a class="anchor" id="teenused"></a>
+            <div class="gallery-grid">
                 <!-- Card 1 -->
                 <div class="card">
                     <div class="slideshow" data-images='["img1a.jpg", "img1b.jpeg"]'></div>
@@ -159,11 +161,12 @@
         </div>
     </div>
     </div>
-    <div id="partnerid" class="partners_section">
+    <a class="anchor" id="partnerid"></a>
+    <div class="partners_section">
         <hr class="goldenline_thick">
         <hr class="goldenline_thin">
         <div class="partners_logo">
-            <img id="Inspector" src="images/ehitusinspektor.png" alt="EHITUSINSPEKTOR">
+            <a href="https://www.ehitusinspektor.ee/" target="_blank"><img id="Inspector" src="images/ehitusinspektor.png" alt="EHITUSINSPEKTOR"></a>
             <img id="electricity" src="images/tvelectricity.png" alt="TVELECTRICITY">
         </div>
         <hr class="goldenline_thin">
@@ -217,12 +220,12 @@
         <div class="footer_logo">
             <H1>DODONE EHITUS</H1>
             <div class="social-media">
-                <a href="https://www.instagram.com/dodone_ehitus?igsh=MXZpZnhsMjR5OGc5Ng==" target="_blank">
+                    <a href="https://www.instagram.com/dodone_ehitus?igsh=MXZpZnhsMjR5OGc5Ng==" target="_blank">
                     <img src="images/instagram.png" alt="INSTAGRAM"></a>
-                <a href="google.com" target="_blank">
-                    <img src="images/twitter.png" alt="X"></a>
-                <a href="google.com" target="_blank">
-                    <img src="images/facebook.png" alt="FACEBOOK"></a>
+      <!--               <a href="google.com" target="_blank">
+                   <img src="images/twitter.png" alt="X"></a>
+                    <a href="google.com" target="_blank">
+                    <img src="images/facebook.png" alt="FACEBOOK"></a>-->
             </div>
         </div>
         <div class="sections">
@@ -257,8 +260,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            once: true, // animations happen only once when scrolling down
-            duration: 1000, // animation duration in ms
+            once: true,
+            duration: 1000,
         });
     </script>
 </body>
