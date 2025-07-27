@@ -11,6 +11,9 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Poppins", sans-serif;
   padding: 0px;
@@ -50,13 +53,18 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 .logo {
+  display: flex;
+  gap: 5px;
+  align-items: flex-end;
   margin: 16px auto auto 30px;
-  justify-self: start;
 }
 h1 {
   font-family: "Lora", sans-serif;
   padding: 0px 0px;
   margin: 0px;
+}
+.mobile-break{
+  display: none;
 }
 .logo div {
   display: inline-block;
@@ -134,7 +142,7 @@ a:active {
 @keyframes heroBackgroundMove {
   0% {
     background-position: center center;
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   100% {
     background-position: right center;
@@ -193,7 +201,6 @@ button {
   width: 320px;
   top: 600px;
   left: 40%;
-
 }
 button img {
   padding-left: 10px;
@@ -519,8 +526,6 @@ h2 {
 }
 .partners_section {
   background-color: var(--gray);
-  height: 332px;
-  width: auto;
   z-index: -10;
   display: block;
   width: 100%;
@@ -528,6 +533,8 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: inline-block;
+   margin-bottom: 0px;
 }
 .goldenline_thick {
   border: none;
@@ -538,14 +545,22 @@ h2 {
   z-index: 10;
 }
 .partners_logo {
+  position: relative;
   margin: 50px auto;
   display: flex;
-  grid-template-columns: repeat(2, 1fr);
   justify-self: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 .partners_logo img {
-  height: 100px;
-  padding: 50px;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  padding: 10px;
 }
 #Inspector {
   justify-self: flex-end;
@@ -562,6 +577,7 @@ h2 {
   z-index: 10;
 }
 .contact_section {
+  margin-top: -8px;
   background-image: url("../images/stiltsblur100.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -729,6 +745,9 @@ footer {
   .navi {
     display: none;
   }
+      .header_section{
+    grid-template-columns: 3fr 1fr;
+  }
   .hamburgerMenu {
     display: flex;
     flex-direction: column;
@@ -747,11 +766,50 @@ footer {
     border-radius: 10px;
     background-color: var(--gold);
   }
+  @media (max-width: 770px) {
+    .mobile-break{
+      display: inline;
+    }
+    h1{
+      font-size: 1.3em;
+      word-break: break-all;
+    }
+    .logo{
+      display: flex;
+      gap: 5px;
+      align-items: flex-start;
+    }
+    .slogan {
+  font-size: 30px;
+  justify-self: center;
+  margin: 0px;
+    }
+#slogan {
+  margin-left: 0px;
+  margin-top: 120px;
+  opacity: 0;
+  transform: translateX(100px);
+  animation: slideInRight 1.2s ease-out 1.5s forwards;
 }
-html {
-  scroll-behavior: smooth;
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-/*
-@media (min-width: 1025px){
+#slogan2 {
+  margin-left: 0;
 }
-*/
+#catchy {
+  text-align: center;
+  margin-left: 0;
+  font-size: 14px;
+}
+#button1 {
+  font-size: 16px;
+  position: absolute;
+  width: 90%;
+  top: 450px;
+}
+  }
+}
