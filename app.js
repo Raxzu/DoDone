@@ -1,4 +1,4 @@
-emailjs.init("yf0XKcNwD5DFijCPE");
+emailjs.init("NKqLy5ylKZmHdmlap");
 
 const form = document.getElementById("contactForm");
 const statusDiv = document.getElementById("form-status");
@@ -53,7 +53,7 @@ form.addEventListener("submit", function (e) {
   label.innerHTML = "Saatmine...";
   spinner.style.display = "inline-block";
 
-  emailjs.sendForm("service_scss9cd", "template_0xmfyod", form)
+  emailjs.sendForm("service_4vx9oob", "template_9zgohpr", form)
     .then(() => {
       form.reset();
       submitBtn.classList.remove("loading");
