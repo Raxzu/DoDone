@@ -15,6 +15,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  position: relative;
   font-family: "Poppins", sans-serif;
   padding: 0px;
   margin: 0px;
@@ -404,7 +405,7 @@ h2 {
 .mission_left img {
   width: 600px;
   position: absolute;
-  margin-top: 200px;
+  margin-top: 192px;
   z-index: 1;
 }
 .mission_right {
@@ -746,7 +747,8 @@ textarea:invalid {
   height: 50px;
 }
 footer {
-  margin-top: 40px;
+  position: absolute;
+  bottom: 0px;
   justify-self: center;
   color: #858585;
 }
