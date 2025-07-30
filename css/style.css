@@ -730,6 +730,7 @@ textarea:invalid {
   height: auto;
   width: auto;
   padding: 20px;
+  padding-bottom: 100px;
 }
 .sections {
   display: grid;
@@ -749,6 +750,7 @@ textarea:invalid {
 footer {
   position: absolute;
   bottom: 0px;
+  padding: 20px;
   justify-self: center;
   color: #858585;
 }
@@ -795,8 +797,6 @@ footer {
       .navbar {
             display: contents;
     }
-
-
     .menu {
   background-image: url("../images/cornerseethoughlinesleft34.png");
   background-color: rgba(222, 222, 220, 1);
@@ -858,6 +858,7 @@ footer {
     border-radius: 10px;
     background-color: var(--gold);
   }
+}
   @media (max-width: 770px) {
     .mobile-break{
       display: inline;
@@ -970,10 +971,13 @@ display: none;
   font-size: 20px;
   padding-left: 10px;
 }
-
-
-
-
-
+.contact-info {
+  padding: 15px;
+}
+.form-wrapper {
+  padding: 50px 10px;
+}
+.footer_section {
+  padding-bottom: 150px;
   }
 }
