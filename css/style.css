@@ -440,6 +440,7 @@ h2 {
   margin-top: 200px;
   text-align: center;
   color: var(--white);
+  justify-self: center;
 }
 .timeline-wrapper {
   top: 50px;
