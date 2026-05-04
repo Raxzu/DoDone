@@ -63,13 +63,14 @@
         
 
         <div id="home" class="header_section">
+            <a href="#home" class="logo">
             <div class="logo">
                 <div><img src="images/logotemporary.png" alt="DODONE LOGO"></div>
                 <div>
                     <h1>DODONE <br class="mobile-break"> EHITUS</h1>
                 </div>
             </div>
-
+            </a>
 
   <div class="navbar">
     <div class="hamburgerMenu" id="hamburger">
@@ -78,20 +79,22 @@
       <div class="line"></div>
     </div>
 
-    <div class="menu" id="menu">
-      <a href="#ettevottest">Ettevõttest</a>
-      <a href="#teenused">Teenused</a>
-      <a href="#partnerid">Partnerid</a>
-      <a href="#kontaktid">Kontaktid</a>
-    </div>
+        <div class="menu" id="menu">
+        <a href="#ettevottest">Ettevõttest</a>
+        <a href="#teenused">Teenused</a>
+        <a href="works.html">Tehtud tööd</a>
+        <a href="#partnerid">Partnerid</a>
+        <a href="#kontaktid">Kontaktid</a>
+        </div>
   </div>
             <div class="navi">
 
                 <ul>
-                    <li><a href="#ettevottest">Ettevõttest</a></li>
-                    <li><a href="#teenused">Teenused</a></li>
-                    <li><a href="#partnerid">Partnerid</a></li>
-                    <li><a href="#kontaktid">Kontaktid</a></li>
+                <li><a href="#ettevottest">Ettevõttest</a></li>
+                <li><a href="#teenused">Teenused</a></li>
+                <li><a href="works.html">Tehtud tööd</a></li>
+                <li><a href="#partnerid">Partnerid</a></li>
+                <li><a href="#kontaktid">Kontaktid</a></li>
                 </ul>
             </div>
         </div>
@@ -108,7 +111,6 @@
                     </div>
                     <div>
                         <p id="catchy">Tööd, mis on loodud just sinu <br class="mobile-break"> vajadusi silmas pidades.</p>
-
                     </div>
                     <div></div>
                 </div>
@@ -129,7 +131,7 @@
                     <img src="images/dodoneplanning.png" data-aos="fade-up" data-aos-offset="200" alt="">
                 </div>
                 <div class="mission_right">
-                    <h2 class="h2left" data-aos="zoom-in">15 aastat</h2>
+                    <h2 class="h2left" data-aos="zoom-in"><span id="experience-years"></span> aastat</h2>
                     <h2 class="h2left" data-aos="zoom-in" id="kogemust">kogemust</h2>
                     <div id="about1" data-aos="fade-up">
                         <p>DoDone OÜ on spetsialiseerunud ümberehitustöödele, sealhulgas korterite remondile, vanade
@@ -143,10 +145,14 @@
                         <p>Siim-Sander Veske Asutaja</p>
                     </div>
                 </div>
+                    <div class="mission-ribbon-wrap" data-aos="zoom-in">
+                        <img src="images/ribbon.png" alt="Edukad Eesti Ettevõte 2025 sertifikaat" class="mission-ribbon">
+                    </div>
             </div>
         </div>
         <hr class="goldenline">
         <div class="product_section">
+            <!--
             <div class="workflow" data-aos="slide-right" data-aos-duration="1500">
                 <div class="timeline-wrapper">
                     <div class="arrow-right"></div>
@@ -176,9 +182,8 @@
                 </div>
             
             </div>
-
-<div class="mobile-timeline"><img src="images/mobiletimelineall.png" alt=""></div>
-
+            -->
+            <div class="mobile-timeline"><img src="images/mobiletimelineall.png" alt=""></div>
 
             <h2 id="question">Kuidas saame aidata?</h2>
             <a class="anchor" id="teenused"></a>
@@ -222,16 +227,28 @@
                     </div>
                 </div>
             </div>
+                <div class="works-readmore-wrap">
+                <a href="works.html" class="works-readmore-btn">
+                    Tutvu tehtud töödega
+                    <span class="arrow">→</span>
+                </a>
+                </div>
         </div>
     </div>
     </div>
     <a class="anchor" id="partnerid"></a>
+
     <div class="partners_section">
         <hr class="goldenline_thick">
         <hr class="goldenline_thin">
         <div class="partners_logo">
+            <div class="logo-box">
             <a href="https://www.ehitusinspektor.ee/" target="_blank"><img id="Inspector" src="images/ehitusinspektor.png" alt="EHITUSINSPEKTOR"></a>
+            </div>
+            
+            <div class="logo-box">
             <img id="electricity" src="images/tvelectricity.png" alt="TVELECTRICITY">
+            </div>
         </div>
         <hr class="goldenline_thin">
         <hr id="kontaktid" class="goldenline_thick">
@@ -240,7 +257,7 @@
         <div class="form-wrapper">
             <!-- Contact Form -->
             <div class="contact-form">
-                <h2>KÜSI PAKKUMIST!</h2>
+                <h2>VÕTKE MEIEGA ÜHENDUST!</h2>
                 <p>Leiame teie ideele parima lahenduse koos hinnapakkumisega!</p>
 
                 <form id="contactForm" novalidate>
@@ -271,12 +288,11 @@
             <!-- Contact Info -->
             <div class="contact-info">
                 <div id="contact-content">
-                <h3>Kontaktandmed</h3>
-                <p><strong>Asume</strong><br>Läänemere tee 9–29 <br>Lasnamäe linnaosa, <br>Tallinn Harju maakond 13913
+                <h3>Info:</h3>
+                <p><strong>Tööpiirkond</strong><br>Harjumaa<br>Tallinn
                 </p>
-                <p><strong>Helista meile</strong><br>Email: info.dodone@gmail.com<br>Mobiil: (+372) 524 6559</p>
-                <p><strong>Avatud</strong><br>Esmaspäevast Reedeni<br>09:00 - 18:00</p>
-                <p style="margin-top: 30px;">Kas teil on küsimusi?<br>Võtke meiega ühendust!</p>
+                <p><strong>Kontaktandmed</strong><br>Email: info.dodone@gmail.com<br>Mobiil: (+372) 524 6559</p>
+                <p><strong>Helistamise ajad</strong><br>Esmaspäevast -  Reedeni<br>09:00 - 21:00</p>
                 </div>
             </div>
         </div>
@@ -288,7 +304,8 @@
             <div class="social-media">
                     <a href="https://www.instagram.com/dodone_ehitus?igsh=MXZpZnhsMjR5OGc5Ng==" target="_blank">
                     <img src="images/instagram.png" alt="INSTAGRAM"></a>
-      <!--               <a href="google.com" target="_blank">
+      <!--           SOCIAL MEDIA LINKS ARE HIDDEN
+                    <a href="google.com" target="_blank">
                    <img src="images/twitter.png" alt="X"></a>
                     <a href="google.com" target="_blank">
                     <img src="images/facebook.png" alt="FACEBOOK"></a>-->
